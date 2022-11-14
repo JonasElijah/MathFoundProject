@@ -1,3 +1,5 @@
+
+
 public class PrimeGCDLCM {
     private int a, b;
 
@@ -10,6 +12,8 @@ public class PrimeGCDLCM {
         System.out.println(GCD(a, b));
         System.out.println(LCM(a,b));
     }
+
+    
 
     public PrimeGCDLCM(int x, int y)
     {
