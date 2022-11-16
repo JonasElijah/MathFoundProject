@@ -1,5 +1,3 @@
-
-
 public class PrimeGCDLCM {
     private int a, b;
 
@@ -7,10 +5,12 @@ public class PrimeGCDLCM {
     {
         a = 32;
         b = 64;
+        System.out.print("Prime factorization of "+a+" = ");
         printPrime(primeFact(a));
+        System.out.print("Prime factorization of "+b+" = ");
         printPrime(primeFact(b));
-        System.out.println(GCD(a, b));
-        System.out.println(LCM(a,b));
+        System.out.println("GCD("+a+","+b+")"+" = "+GCD(a, b));
+        System.out.println("LCM("+a+","+b+")"+" = "+LCM(a,b));
     }
 
     
@@ -19,10 +19,12 @@ public class PrimeGCDLCM {
     {
         a = x;
         b = y;
+        System.out.print("Prime factorization of "+a+" = ");
         printPrime(primeFact(a));
+        System.out.print("Prime factorization of "+b+" = ");
         printPrime(primeFact(b));
-        System.out.println(GCD(a, b));
-        System.out.println(LCM(a,b));
+        System.out.println("GCD("+a+","+b+")"+" = "+GCD(a, b));
+        System.out.println("LCM("+a+","+b+")"+" = "+LCM(a,b));
     }
 
     public static int[] primeFact(int a)
@@ -47,7 +49,9 @@ public class PrimeGCDLCM {
         int i = 0;
         while(x[i] != 0)
         {
-            System.out.println(x[i]);
+            System.out.print(x[i]);
+            if(x[i+1] != 0)
+                System.out.print(" * ");
             i++;
         }
         System.out.println();

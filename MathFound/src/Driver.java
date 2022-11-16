@@ -14,17 +14,27 @@ public class Driver
     
         while(input == true)
         {
-            System.out.print("(1) Prime Factorization, GCD and LCM: ");
+            System.out.print("[1] Prime Factorization, GCD and LCM \n[2] Binomial Theorem\nChoose an option: ");
             userInput = scanner.nextInt();
             switch(userInput)
             {
                 case 1:
                     int a,b;
+                    System.out.println();
                     System.out.print("Give me a number: ");
                     a = scanner.nextInt();
                     System.out.print("Give me a another number: ");
                     b = scanner.nextInt();
                     PrimeGCDLCM prime1 = new PrimeGCDLCM(a,b);
+                    break;
+                case 2:
+                    int binomialNum;
+                    binomialTheorem binomial1;
+                    System.out.println();
+                    System.out.print("Give me a number from 1 to 10: ");
+                    binomialNum = scanner.nextInt();
+                    if(binomialNum < 10 && binomialNum > 1)
+                        binomial1 = new binomialTheorem(binomialNum);
                     break;
             }
 
