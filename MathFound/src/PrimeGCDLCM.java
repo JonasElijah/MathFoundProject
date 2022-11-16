@@ -1,30 +1,16 @@
 public class PrimeGCDLCM {
-    private int a, b;
+    private static int a, b;
 
     public PrimeGCDLCM()
     {
         a = 32;
         b = 64;
-        System.out.print("Prime factorization of "+a+" = ");
-        printPrime(primeFact(a));
-        System.out.print("Prime factorization of "+b+" = ");
-        printPrime(primeFact(b));
-        System.out.println("GCD("+a+","+b+")"+" = "+GCD(a, b));
-        System.out.println("LCM("+a+","+b+")"+" = "+LCM(a,b));
     }
-
-    
 
     public PrimeGCDLCM(int x, int y)
     {
         a = x;
         b = y;
-        System.out.print("Prime factorization of "+a+" = ");
-        printPrime(primeFact(a));
-        System.out.print("Prime factorization of "+b+" = ");
-        printPrime(primeFact(b));
-        System.out.println("GCD("+a+","+b+")"+" = "+GCD(a, b));
-        System.out.println("LCM("+a+","+b+")"+" = "+LCM(a,b));
     }
 
     public static int[] primeFact(int a)
@@ -44,7 +30,7 @@ public class PrimeGCDLCM {
         result[c] = a;
         return result;
     }
-    public static void printPrime(int[] x)
+    public void printPrime(int[] x)
     {
         int i = 0;
         while(x[i] != 0)
@@ -57,10 +43,10 @@ public class PrimeGCDLCM {
         System.out.println();
     }
     
-    public static int LCM(int x, int y)
+    public static int LCM(int a, int b)
     {
-        int[] primeFact1 = primeFact(x);
-        int[] primeFact2 = primeFact(y);
+        int[] primeFact1 = primeFact(a);
+        int[] primeFact2 = primeFact(b);
         
         int[] result = new int[1024];
         int[] urmom = new int[1024];
@@ -100,10 +86,10 @@ public class PrimeGCDLCM {
         return answ;
     }
     
-    public static int GCD(int x, int y)
+    public static int GCD(int a, int b)
     {
-        int[] primeFact1 = primeFact(x);
-        int[] primeFact2 = primeFact(y);
+        int[] primeFact1 = primeFact(a);
+        int[] primeFact2 = primeFact(b);
         
         int[] result = new int[1024];
         int[] urmom = new int[1024];

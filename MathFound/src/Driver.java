@@ -26,15 +26,18 @@ public class Driver
                     System.out.print("Give me a another number: ");
                     b = scanner.nextInt();
                     PrimeGCDLCM prime1 = new PrimeGCDLCM(a,b);
+                    System.out.print("Prime factorization of "+a+" = 1 * ");
+                    prime1.printPrime(PrimeGCDLCM.primeFact(a));
+                    System.out.print("Prime factorization of "+b+" = 1 * ");
+                    prime1.printPrime(PrimeGCDLCM.primeFact(b));
+                    System.out.println("GCD("+a+","+b+")"+" = "+PrimeGCDLCM.GCD(a,b));
+                    System.out.println("LCM("+a+","+b+")"+" = "+PrimeGCDLCM.LCM(a,b));
                     break;
                 case 2:
-                    int binomialNum;
-                    binomialTheorem binomial1;
                     System.out.println();
                     System.out.print("Give me a number from 1 to 10: ");
-                    binomialNum = scanner.nextInt();
-                    if(binomialNum < 10 && binomialNum > 1)
-                        binomial1 = new binomialTheorem(binomialNum);
+                    binomialTheorem binomial1  = new binomialTheorem(scanner.nextInt());
+                    binomial1.printBinomial();
                     break;
             }
 
