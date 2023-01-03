@@ -14,7 +14,7 @@ public class Driver
     
         while(input == true)
         {
-            System.out.print("[1] Prime Factorization, GCD and LCM \n[2] Binomial Theorem\nChoose an option: ");
+            System.out.print("[1] Prime Factorization, GCD and LCM \n[2] Binomial Theorem\n[3]Combinatorics\nChoose an option: ");
             userInput = scanner.nextInt();
             switch(userInput)
             {
@@ -35,10 +35,36 @@ public class Driver
                     break;
                 case 2:
                     System.out.println();
-                    System.out.print("Give me a number from 1 to 10: ");
+                    System.out.print("Give me a number from 1 to 9: ");
                     binomialTheorem binomial1  = new binomialTheorem(scanner.nextInt());
                     binomial1.printBinomial();
                     break;
+                case 3:
+                    int numChars = -1;
+                    int numNums = -1;
+                    while(numChars < 0)
+		            {
+		    	        System.out.print("How many Characters are in the password?\n");
+			            numChars = scanner.nextInt();
+			            if(numChars<0)
+			            {
+				            System.out.print("Number of Characters must be a positive integer.\n");
+			            }
+		            }
+		
+                    while(numNums < 0)
+                    {
+                        System.out.print("How many Numbers are in the password?\n");
+                        numNums = scanner.nextInt();
+                        if(numNums<0)
+                        {
+                            System.out.print("Number of Numbers must be a positive integer.\n");
+                        }	
+                    }
+                    Combinatorics comb = new Combinatorics(numChars, numNums);
+                 default:
+                	 System.out.println();
+                	 System.out.println("Please choose from one of the options");
             }
 
             System.out.print("Would you like to use our program? (y/n) ");

@@ -30,6 +30,7 @@ public class PrimeGCDLCM {
         result[c] = a;
         return result;
     }
+    
     public void printPrime(int[] x)
     {
         int i = 0;
